@@ -15,7 +15,7 @@ const entries = [
   },
   {
     icon: "volunteer_activism",
-    iconBg: "bg-surface-container-highest text-primary",
+    iconBg: "bg-primary-fixed text-primary",
     label: "2021 - En cours",
     title: "Phénix Event",
     role: "Responsable Technique",
