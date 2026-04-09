@@ -28,7 +28,7 @@ const skillGroups = [
     icon: "construction",
     skills: ["VS Code", "IntelliJ", "3D Printing", "Postman", "SonarQube", "GitHub Action", "WireGuard"],
   },
-];  
+];                                                        
 
 export function Skills() {
   return (

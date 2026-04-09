@@ -14,9 +14,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Baptiste DUPUIS | Software Developer Portfolio",
+  title: "Baptiste DUPUIS ",
   description:
-    "Portfolio de Baptiste DUPUIS, etudiant en developpement informatique a la recherche d'une alternance.",
+    "Portfolio de Baptiste DUPUIS, étudiant en developpement informatique a la recherche d'une alternance.",
 };
 
 export default function RootLayout({
