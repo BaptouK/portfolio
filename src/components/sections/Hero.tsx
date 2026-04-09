@@ -39,8 +39,8 @@ export function Hero() {
           <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden border-4 border-surface-container-highest shadow-xl">
             <Image
               alt={`${identity.firstName} ${identity.lastName}`}
-              className="w-full h-full object-cover"
-              src="/moi.webp"
+              className="object-cover"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/moi.webp`}
               fill
             />
           </div>

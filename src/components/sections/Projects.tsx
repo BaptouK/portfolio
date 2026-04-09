@@ -61,7 +61,7 @@ export function Projects() {
               <div className="relative h-48 overflow-hidden bg-surface-variant">
                 <Image
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  src={project.image}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${project.image}`}
                   alt={project.title}
                   fill
                 />
