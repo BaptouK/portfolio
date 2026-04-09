@@ -1,0 +1,269 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+
+  /* Material Design 3 palette */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-container: var(--secondary-container);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-on-secondary-container: var(--on-secondary-container);
+
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-variant: var(--surface-variant);
+  --color-surface-tint: var(--surface-tint);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-inverse-primary: var(--inverse-primary);
+
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+
+  --color-error: var(--error);
+  --color-error-container: var(--error-container);
+  --color-on-error: var(--on-error);
+  --color-on-error-container: var(--on-error-container);
+
+  /* Keep shadcn compatibility */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Material Design 3 - Light */
+  --primary: #49285c;
+  --primary-foreground: #ffffff;
+  --primary-fixed: #f4d9ff;
+  --primary-fixed-dim: #e1b7f6;
+  --primary-container: #613f75;
+  --on-primary-fixed: #2c0b40;
+  --on-primary-fixed-variant: #5a396e;
+
+  --secondary: #5d5e67;
+  --secondary-foreground: #ffffff;
+  --secondary-container: #e3e1ed;
+  --secondary-fixed: #e3e1ed;
+  --secondary-fixed-dim: #c6c5d0;
+  --on-secondary-container: #63636d;
+
+  --surface: #fff7fc;
+  --surface-dim: #e3d6e6;
+  --surface-bright: #fff7fc;
+  --surface-container: #f8e9fa;
+  --surface-container-low: #fdefff;
+  --surface-container-high: #f2e4f4;
+  --surface-container-highest: #ecdeee;
+  --surface-container-lowest: #ffffff;
+  --surface-variant: #ecdeee;
+  --surface-tint: #745088;
+  --on-surface: #201924;
+  --on-surface-variant: #4c444e;
+  --inverse-surface: #362d39;
+  --inverse-on-surface: #fbecfc;
+  --inverse-primary: #e1b7f6;
+
+  --outline: #7d747e;
+  --outline-variant: #cec3cf;
+
+  --tertiary: #35372f;
+  --tertiary-container: #4c4e45;
+  --tertiary-fixed: #e3e3d8;
+  --tertiary-fixed-dim: #c7c7bc;
+  --on-tertiary-container: #bebfb4;
+
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+
+  /* shadcn compat */
+  --background: #fff7fc;
+  --foreground: #201924;
+  --card: #ffffff;
+  --card-foreground: #201924;
+  --popover: #fff7fc;
+  --popover-foreground: #201924;
+  --muted: #f2e4f4;
+  --muted-foreground: #4c444e;
+  --accent: #f2e4f4;
+  --accent-foreground: #201924;
+  --destructive: #ba1a1a;
+  --border: #cec3cf;
+  --input: #cec3cf;
+  --ring: #49285c;
+  --radius: 0.625rem;
+
+  --chart-1: #49285c;
+  --chart-2: #613f75;
+  --chart-3: #745088;
+  --chart-4: #e1b7f6;
+  --chart-5: #f4d9ff;
+
+  --sidebar: #f8e9fa;
+  --sidebar-foreground: #201924;
+  --sidebar-primary: #49285c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f2e4f4;
+  --sidebar-accent-foreground: #201924;
+  --sidebar-border: #cec3cf;
+  --sidebar-ring: #49285c;
+}
+
+.dark {
+  --primary: #e1b7f6;
+  --primary-foreground: #2c0b40;
+  --primary-fixed: #f4d9ff;
+  --primary-fixed-dim: #e1b7f6;
+  --primary-container: #613f75;
+  --on-primary-fixed: #2c0b40;
+  --on-primary-fixed-variant: #5a396e;
+
+  --secondary: #c6c5d0;
+  --secondary-foreground: #1a1b23;
+  --secondary-container: #46464f;
+  --secondary-fixed: #e3e1ed;
+  --secondary-fixed-dim: #c6c5d0;
+  --on-secondary-container: #c6c5d0;
+
+  --surface: #161118;
+  --surface-dim: #161118;
+  --surface-bright: #3d353f;
+  --surface-container: #1e1820;
+  --surface-container-low: #1e1720;
+  --surface-container-high: #29222b;
+  --surface-container-highest: #342c36;
+  --surface-container-lowest: #110d13;
+  --surface-variant: #4c444e;
+  --surface-tint: #e1b7f6;
+  --on-surface: #ecdeee;
+  --on-surface-variant: #cec3cf;
+  --inverse-surface: #ecdeee;
+  --inverse-on-surface: #362d39;
+  --inverse-primary: #745088;
+
+  --outline: #978e98;
+  --outline-variant: #4c444e;
+
+  --tertiary: #c7c7bc;
+  --tertiary-container: #4c4e45;
+  --tertiary-fixed: #e3e3d8;
+  --tertiary-fixed-dim: #c7c7bc;
+  --on-tertiary-container: #c7c7bc;
+
+  --error: #ffb4ab;
+  --error-container: #93000a;
+  --on-error: #690005;
+  --on-error-container: #ffdad6;
+
+  --background: #161118;
+  --foreground: #ecdeee;
+  --card: #1e1820;
+  --card-foreground: #ecdeee;
+  --popover: #161118;
+  --popover-foreground: #ecdeee;
+  --muted: #29222b;
+  --muted-foreground: #978e98;
+  --accent: #29222b;
+  --accent-foreground: #ecdeee;
+  --destructive: #ffb4ab;
+  --border: #4c444e;
+  --input: #4c444e;
+  --ring: #e1b7f6;
+
+  --chart-1: #e1b7f6;
+  --chart-2: #c6c5d0;
+  --chart-3: #c7c7bc;
+  --chart-4: #978e98;
+  --chart-5: #745088;
+
+  --sidebar: #1e1820;
+  --sidebar-foreground: #ecdeee;
+  --sidebar-primary: #e1b7f6;
+  --sidebar-primary-foreground: #2c0b40;
+  --sidebar-accent: #29222b;
+  --sidebar-accent-foreground: #ecdeee;
+  --sidebar-border: #4c444e;
+  --sidebar-ring: #e1b7f6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-surface text-on-surface;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
