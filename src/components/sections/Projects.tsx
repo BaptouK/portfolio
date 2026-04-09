@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
   {
@@ -57,11 +58,12 @@ export function Projects() {
               onClick={() => window.open(project.repo, "_blank")}
               className="bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl group border border-outline-variant/10 cursor-pointer"
             >
-              <div className="h-48 overflow-hidden bg-surface-variant">
-                <img
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              <div className="relative h-48 overflow-hidden bg-surface-variant">
+                <Image
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                   src={project.image}
                   alt={project.title}
+                  fill
                 />
               </div>
               <div className="p-6">

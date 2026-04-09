@@ -2,6 +2,7 @@
 
 import { identity } from "@/lib/data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function Hero() {
 
@@ -36,10 +37,11 @@ export function Hero() {
           className="order-1 lg:order-2 flex justify-center"
         >
           <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden border-4 border-surface-container-highest shadow-xl">
-            <img
+            <Image
               alt={`${identity.firstName} ${identity.lastName}`}
               className="w-full h-full object-cover"
               src="/moi.webp"
+              fill
             />
           </div>
         </motion.div>
