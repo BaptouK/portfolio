@@ -1,36 +1,11 @@
 "use client";
 
+import { useLanguage } from "@/components/LanguageProvider";
 import { motion } from "framer-motion";
 
-const skillGroups = [
-  {
-    title: "Frontend",
-    icon: "terminal",
-    skills: ["HTML5", "CSS3", "Angular", "JavaScript", "Typescript"], 
-  },
-  {
-    title: "Backend",
-    icon: "data_object",
-    skills: ["Java", "Node.js", "Express", "PHP", "SQL","MongoDb"],
-  },
-  {
-    title: "Software Programming",
-    icon: "code",
-    skills: ["C/C++", "C#", "Rust", "Python"],
-  },
-  {
-    title: "Infrastructure",
-    icon: "lan",
-    skills: ["Docker", "Proxmox", "VirtualBox", "OpenSense", "Bash", "Linux (Debian/Fedora)", "Git", "Networking", "Traefik"],
-  },
-  {   
-    title: "Tools",
-    icon: "construction",
-    skills: ["VS Code", "IntelliJ", "3D Printing", "Postman", "SonarQube", "GitHub Action", "WireGuard"],
-  },
-];                                                        
-
 export function Skills() {
+  const { dict } = useLanguage();
+
   return (
     <section id="skills" className="py-24 px-8 bg-surface-container-low">
       <div className="max-w-7xl mx-auto">
@@ -42,14 +17,14 @@ export function Skills() {
           className="mb-16"
         >
           <h2 className="text-4xl font-[family-name:var(--font-heading)] font-bold text-primary tracking-tight">
-            Competences Techniques
+            {dict.skills.title}
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillGroups.map((group, i) => (
+          {dict.skills.groups.map((group, i) => (
             <motion.div
-              key={group.title}
+              key={group.icon}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

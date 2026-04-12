@@ -1,8 +1,10 @@
 "use client";
 
 import { identity } from "@/lib/data";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export function Footer() {
+  const { dict } = useLanguage();
 
   return (
     <footer
@@ -20,7 +22,7 @@ export function Footer() {
               location_on
             </span>
             <p className="text-on-surface-variant text-sm font-medium">
-              {identity.location}, France
+              {identity.location}{dict.footer.locationSuffix}
             </p>
           </div>
         </div>

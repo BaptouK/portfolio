@@ -1,10 +1,12 @@
 "use client";
 
 import { identity } from "@/lib/data";
+import { useLanguage } from "@/components/LanguageProvider";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function Hero() {
+  const { dict } = useLanguage();
 
   return (
     <section
@@ -25,7 +27,7 @@ export function Hero() {
             {identity.lastName}
           </h1>
           <p className="text-2xl font-[family-name:var(--font-heading)] text-primary-container dark:text-primary-fixed-dim font-medium">
-            {identity.title}
+            {dict.hero.title}
           </p>
         </motion.div>
 
@@ -55,10 +57,9 @@ export function Hero() {
         >
           <div className="bg-surface-container-low p-8 rounded-xl border-l-4 lg:border-l-0 lg:border-r-4 border-primary shadow-sm">
             <p className="text-lg text-on-surface-variant leading-relaxed font-medium">
-              {identity.about.split("alternance")[0]}alternance pour la
-              periode de{" "}
+              {dict.hero.aboutBefore}
               <span className="text-primary font-bold">
-                Sept. 2026 a Sept. 2027
+                {dict.hero.alternancePeriod}
               </span>
               .
             </p>
