@@ -7,5 +7,6 @@ export const identity = {
   links: {
     github: "https://github.com/BaptouK",
     linkedin: "https://linkedin.com/in/baptistedps",
+    blog: "https://blog.baptouk.live",
   },
 };

@@ -45,6 +45,14 @@ export function Footer() {
             LinkedIn
           </a>
           <a
+            href={identity.links.blog}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-700/60 dark:text-purple-500 hover:text-purple-900 dark:hover:text-purple-300 transition-colors hover:-translate-y-0.5 transition-transform text-sm uppercase tracking-widest font-bold"
+          >
+            Blog
+          </a>
+          <a
             href={`mailto:${identity.email}`}
             className="text-purple-700/60 dark:text-purple-500 hover:text-purple-900 dark:hover:text-purple-300 transition-colors hover:-translate-y-0.5 transition-transform text-sm uppercase tracking-widest font-bold"
           >

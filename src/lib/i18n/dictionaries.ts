@@ -146,7 +146,7 @@ const fr: Dictionary = {
           "Une plateforme interactive permettant des interactions multijoueurs instantanées avec une latence minimale.",
         stack: ["Angular", "TypeScript", "Java Spring", "MongoDB", "Node.js"],
         image: "/pokerixe.webp",
-        repo: "https://github.com/BaptouK/PokeRixe",
+        repo: "https://blog.baptouk.live/projects/pokerixe/",
       },
       {
         title: "Homelab Personnel",
@@ -154,7 +154,7 @@ const fr: Dictionary = {
           "Infrastructure auto-hébergée complète avec Proxmox pour la virtualisation, Traefik comme reverse proxy, Wireguard pour l'accès VPN sécurisé et Docker pour le déploiement des services. Hébergement de plusieurs applications : site web, Outline, gestionnaire de mots de passe et serveur Minecraft.",
         stack: ["Proxmox", "Docker", "Traefik", "Wireguard", "Debian"],
         image: "/homelab.avif",
-        repo: "https://github.com/BaptouK/",
+        repo: "https://blog.baptouk.live/projects/homelab/",
       },
       {
         title: "Jeu de la Vie \u2014 C++",
@@ -162,7 +162,7 @@ const fr: Dictionary = {
           "Implémentation de l'automate cellulaire de Conway utilisant la bibliothèque graphique SFML.",
         stack: ["C++", "SFML", "CMake", "CLion"],
         image: "/conway.webp",
-        repo: "https://github.com/BaptouK/game_of_life",
+        repo: "https://blog.baptouk.live/blog/game-of-life/",
       },
     ],
   },
