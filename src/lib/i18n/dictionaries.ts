@@ -97,7 +97,7 @@ const fr: Dictionary = {
     downloadCv: "Télécharger mon CV",
   },
   hero: {
-    title: "Développeur Logiciel/Web",
+    title: "Développeur FullStack",
     aboutBefore:
       "Étudiant en 2e année d'informatique, je recherche une alternance pour la période de ",
     alternancePeriod: "Sept. 2026 à Sept. 2027",
@@ -141,12 +141,12 @@ const fr: Dictionary = {
     title: "Projets Récents",
     items: [
       {
-        title: "Site de combat Pokémon en temps réel",
+        title: "PokéRixe - Site de combat Pokémon en temps réel",
         description:
-          "Une plateforme interactive permettant des interactions multijoueurs instantanées avec une latence minimale.",
+          "Une application web de combat au tour par tour où deux joueurs s'affrontent avec des Pokémon. Le MVP propose la gestion complète des comptes utilisateurs, un pokédex interactif, la création et la gestion d'équipes personnalisées, des combats multijoueurs synchronisés en temps réel, l'historique détaillé des affrontements, et une analyse post-combat alimentée par l'IA pour décortiquer les stratégies utilisées.",
         stack: ["Angular", "TypeScript", "Java Spring", "MongoDB", "Node.js"],
-        image: "/pokerixe.webp",
-        repo: "https://blog.baptouk.live/projects/pokerixe/",
+        image: "/pokerixe.png",
+        repo: "https://pokerixe.baptouk.live/",
       },
       {
         title: "Homelab Personnel",
@@ -157,7 +157,7 @@ const fr: Dictionary = {
         repo: "https://blog.baptouk.live/projects/homelab/",
       },
       {
-        title: "Jeu de la Vie \u2014 C++",
+        title: "Jeu de la Vie - C++",
         description:
           "Implémentation de l'automate cellulaire de Conway utilisant la bibliothèque graphique SFML.",
         stack: ["C++", "SFML", "CMake", "CLion"],
@@ -293,7 +293,7 @@ const en: Dictionary = {
     downloadCv: "Download my CV",
   },
   hero: {
-    title: "Software/Web Developer",
+    title: "Fullstack Developer",
     aboutBefore:
       "Second-year Computer Science student, looking for an apprenticeship for the period of ",
     alternancePeriod: "Sept. 2026 to Sept. 2027",
@@ -337,11 +337,11 @@ const en: Dictionary = {
     title: "Recent Projects",
     items: [
       {
-        title: "Real-Time Pokémon Battle Platform",
+        title: "PokéRixe - Real-Time Pokémon Battle Platform",
         description:
-          "An interactive platform enabling instant multiplayer battles with minimal latency.",
+          "A turn-based combat web application where two players battle with Pokémon. The MVP offers complete user account management, an interactive Pokédex, personalized team creation and management, real-time multiplayer battles synchronized across players, detailed combat history, and AI-powered post-battle analysis to break down the strategies used.",
         stack: ["Angular", "TypeScript", "Java Spring", "MongoDB", "Node.js"],
-        image: "/pokerixe.webp",
+        image: "/pokerixe.png",
         repo: "https://github.com/BaptouK/PokeRixe",
       },
       {
